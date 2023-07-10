@@ -38,8 +38,11 @@
 
   fetch('list').then(function(response) {
     response.text().then(function(text) {
+      var realText = '';
       if (text.indexOf('livepreview') !== -1) {
-        var realText = text.substr(text.indexOf('script>') + 'script>'.length);
+        realText = text.substr(text.indexOf('script>') + 'script>'.length);
+      } else {
+        realText = text;
       }
       var items = realText.split(',');
       var i = 0;
