@@ -5,13 +5,13 @@ function Person(name, first, second, third = 10) {
     this.third = third;
 }
 
-Person.prototype.sum = function() {
+Person.prototype.sum = function () {
     return 'prototype: ' + (this.first + this.second);
 }
- 
+
 // constructor
 var kim = new Person('kim', 10, 20, 30);
-kim.sum = function() {
+kim.sum = function () {
     return 'this: ' + (this.first + this.second);
 }
 var lee = new Person('lee', 10, 10);
