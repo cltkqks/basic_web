@@ -51,9 +51,10 @@ const add = (...numbers: number[]) => {
 const addedNumbers = add(5, 10, 2, 3.7);
 console.log(addedNumbers);
 
+hobbies.push("Reading", "Listening")
 const [hobby1, hobby2, ...remainingHobbies] = hobbies;
 
-console.log(hobbies, hobby1, hobby2);
+console.log(hobbies, hobby1, hobby2, ...remainingHobbies);
 
 const { firstName: userName, age } = person;
 
